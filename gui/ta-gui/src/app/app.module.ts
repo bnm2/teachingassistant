@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { AlunoService } from './aluno.service';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,7 @@ import { AppComponent } from './app.component';
     FormsModule
 
   ],
-  providers: [],
+  providers: [AlunoService],
   bootstrap: [AppComponent]
 })
 
