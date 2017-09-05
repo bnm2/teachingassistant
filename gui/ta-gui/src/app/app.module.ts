@@ -5,11 +5,13 @@ import { FormsModule } from '@angular/forms';
 
 
 import { AppComponent } from './app.component';
+import { MetasComponent } from './metas.component';
 import { AlunoService } from './aluno.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MetasComponent
   ],
   imports: [
     BrowserModule,
