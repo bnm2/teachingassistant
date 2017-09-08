@@ -1,4 +1,4 @@
-import { Aluno } from '../../gui/ta-gui/src/app/aluno';
+import { Aluno } from '../../ta-gui/src/app/aluno';
 
 export class CadastroDeAlunos {
   alunos: Aluno[] = [];
