@@ -53,3 +53,4 @@ When solicito a lista de “alunos com auto-avaliações discrepantes”
 Then continua na página onde estava mas agora com o nome e avaliações do(s) aluno(s) que teve/tiveram autoavaliação discrepante destacados
 And eu consigo ver um aluno destacado entre os 3. 
 
+"Alteracao para exercicio 15. E agora com pequeno ajuste".
