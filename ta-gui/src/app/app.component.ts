@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
+
 import { NgModule } from '@angular/core';
+
 
 @Component({
   selector: 'app-root',
@@ -7,6 +9,7 @@ import { NgModule } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
    aluno: Aluno = {nome: "Bruno", cpf: "", email: "", GitHub: ""};
 }
 
@@ -16,3 +19,4 @@ export class Aluno {
   email: string;
   GitHub: string;
 }
+
