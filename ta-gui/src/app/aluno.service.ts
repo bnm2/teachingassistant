@@ -1,7 +1,7 @@
 import { Injectable }    from '@angular/core';
-import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { retry, map } from 'rxjs/operators';
+import { retry, map, catchError } from 'rxjs/operators';
 
 import { Aluno } from '../../../common/aluno';
 
@@ -19,6 +19,15 @@ export class AlunoService {
                 retry(2),
                 map( res => {if (res.success) {return aluno;} else {return null;}} )
               ); 
+  }
+
+  remover(aluno: Aluno): Observable<Aluno> {
+    //const  url = this.taURL + /aluno/${aluno.cpf};
+    return this.http.delete<any>(this.taURL + '/aluno/$(aluno.cpf)', {headers: this.headers,})
+    .pipe( 
+      retry(2),
+      map( res => {if (res.success) {return aluno;} else {return null;}} )
+    ); 
   }
 
   atualizar(aluno: Aluno): Observable<Aluno> {
